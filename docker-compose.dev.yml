@@ -1,0 +1,11 @@
+version: '3'
+services:
+  express:
+    build:
+      context: .
+      target: development
+    container_name: express-container-dev
+    volumes:
+      - ./index.js:/app/index.js:ro
+    environment:
+      - ENV=development
